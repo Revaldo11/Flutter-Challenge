@@ -3,5 +3,3 @@
 A new Flutter project.
 
 ## Getting Started
-
-![D1](image/D1.PNG)
