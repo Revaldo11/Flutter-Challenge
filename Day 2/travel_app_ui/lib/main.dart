@@ -16,7 +16,8 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
   late PageController _pageController;
 
   void _onScroll() {
@@ -29,6 +30,12 @@ class _HomePageState extends State<HomePage> {
       initialPage: 0,
     )..addListener(_onScroll);
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   @override
